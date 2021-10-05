@@ -84,19 +84,27 @@ print("This is our real dictionary")
 print(our_dict)
 
 
-
+import random
 def make_text(chains):
     """Return text from chains."""
 
     words = []
 
-    first_words = rand.choice(chains.keys())
+    #from first words, rand.choice(chains.value(first_words))
+    first_words = random.choice(list(chains.keys()))
     #pick a key
     words.append(first_words)
-    
-    #from first words, rand.choice(chains.value(first_words))
-    #ask, how to pull dictionary of correct key
-    words.append(thatchoice[1])
+    print(f"WORDS SO FAR: {words}")
+
+    while words[-1] != None:
+        #find last two words, tuple
+        (words[-2], words[-1])
+        next_word = random.choice(list(chains((words[-2], words[-1]))
+        words.append(next_word)
+
+    print("words so far")
+    print(words)
+    #words.append(thatchoice[1])
     
     #pick a value from list
     #pick newe key based on value
@@ -104,6 +112,7 @@ def make_text(chains):
 
     return ' '.join(words)
 
+make_text(our_dict)
 
   #  input_path = 'green-eggs.txt'
 
